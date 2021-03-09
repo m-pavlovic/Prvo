@@ -10,17 +10,16 @@ public class Zadatak4 {
             Scanner sc = new Scanner(System.in);
             String str = sc.next();
             System.out.println("Unijeli ste: " + str);
-                while (true) {
+            boolean sflag = true;
+                while (sflag) {
                     System.out.println("Ako zelite ponoviti unos pritisnite: y ");
                     Scanner sc1 = new Scanner(System.in);
                     String str1 = sc1.next();
-                    if (str1.equals("y")) {
-                        break;
-                    } else {
+                    if (!str1.equals("y")) {
                         System.out.println("Izabrali ste izlaz iz programa!");
                         flag = false;
-                        break;
                     }
+                    sflag = false;
                 }
 
             sc.reset();
